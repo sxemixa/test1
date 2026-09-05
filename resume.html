@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Резюме — Anastasia Khasanova</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 0 24px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 0 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eaeaea;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            color: #666;
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            color: #999;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 48px auto 80px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 4px;
+        }
+
+        .sidebar .title {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .contacts {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .sidebar .contacts a {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sidebar .block {
+            margin-top: 32px;
+        }
+        .sidebar .block h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        .sidebar .block ul {
+            list-style: none;
+            font-size: 15px;
+        }
+        .sidebar .block ul li {
+            margin-bottom: 6px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 2px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+
+        /* ===== MAIN ===== */
+        .main h2 {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .main .subhead {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 32px;
+        }
+
+        .main .section {
+            margin-bottom: 40px;
+        }
+
+        .main .section h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #999;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .job {
+            margin-bottom: 28px;
+        }
+        .job .head {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .job .head .date {
+            font-weight: 400;
+            color: #888;
+            font-size: 15px;
+        }
+        .job .company {
+            color: #555;
+            font-weight: 400;
+            margin-bottom: 6px;
+        }
+        .job ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 15px;
+            color: #333;
+        }
+        .job ul li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+        .job ul li::before {
+            content: "–";
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 4px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            padding-top: 32px;
+            border-top: 1px solid #eaeaea;
+            font-size: 14px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        footer a {
+            color: #555;
+        }
+        footer a:hover {
+            color: #000;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .nav-links {
+                gap: 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Anastasia <span>Khasanova</span></div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="resume.html">Резюме</a>
+            <a href="case1.html">Зоопарк</a>
+            <a href="case2.html">Генетика</a>
+            <a href="case3.html">Фитнес</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <h1>Anastasia Khasanova</h1>
+            <div class="title">UX · UI · Product Designer</div>
+
+            <div class="contacts">
+                <a href="tel:+79162649291">+7 916 264-92-91</a><br />
+                <a href="mailto:neldubrovina@yandex.ru">neldubrovina@yandex.ru</a><br />
+                Москва, м. Дмитровская<br />
+                <span style="font-size:14px;color:#888;">Не готова к переезду, готова к командировкам</span>
+            </div>
+
+            <div class="block">
+                <h3>UI/UX Skills</h3>
+                <div class="skills-grid">
+                    <span class="badge">UX Research</span>
+                    <span class="badge">Usability Testing</span>
+                    <span class="badge">Interface Audit</span>
+                    <span class="badge">User Flow</span>
+                    <span class="badge">Hypotheses</span>
+                    <span class="badge">Wireframing</span>
+                    <span class="badge">CJM</span>
+                    <span class="badge">UI Design</span>
+                    <span class="badge">User Persona</span>
+                    <span class="badge">UI Kit</span>
+                    <span class="badge">JTBD</span>
+                    <span class="badge">Prototyping</span>
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Tools +</h3>
+                <div class="skills-grid">
+                    <span class="badge">Figma</span>
+                    <span class="badge">Photoshop</span>
+                    <span class="badge">Illustrator</span>
+                    <span class="badge">Zbrush</span>
+                    <span class="badge">Blender</span>
+                    <span class="badge">AI instruments</span>
+                    <span class="badge">GitHub</span>
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Образование</h3>
+                <p style="font-size:15px;margin-bottom:4px;"><strong>Школа 21 от Сбера, Bang Bang Education</strong><br />UI/UX-дизайнер, 2026</p>
+                <p style="font-size:15px;"><strong>Финансовый университет при Правительстве РФ</strong><br />Бакалавр, Менеджмент, Маркетинг, 2017</p>
+            </div>
+        </aside>
+
+        <!-- ===== MAIN ===== -->
+        <main class="main">
+            <h2>7+ лет в digital и маркетинге</h2>
+            <div class="subhead">
+                Применяю художественный бэкграунд и аналитическое мышление в продуктовом дизайне.
+                Перевожу бизнес-цели и маркетинг в конверсионные интерфейсы.
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <h3>Опыт работы</h3>
+
+                <div class="job">
+                    <div class="head">
+                        <span>Обучение UI/UX Designer</span>
+                        <span class="date">2026 — настоящее время</span>
+                    </div>
+                    <div class="company">Школа 21, Bang Bang Education, Москва</div>
+                    <ul>
+                        <li>Изучение UX-исследований, интерфейсов и системного дизайна</li>
+                        <li>10+ учебных проектов</li>
+                        <li>4 групповых проекта в роли team lead</li>
+                        <li>Design-ревью и развитие soft-skills</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="head">
+                        <span>Графический дизайнер / Контент-менеджер</span>
+                        <span class="date">2017–2024</span>
+                    </div>
+                    <div class="company">Enter VR, Москва</div>
+                    <ul>
+                        <li><strong>Digital & Web Design:</strong> 5+ веб-проектов (лендинги в Figma, адаптация на Tilda), 100+ карточек товаров (Rich-контент), 30+ презентаций</li>
+                        <li><strong>Branding & Offline:</strong> Офлайн-маркетинг «под ключ»: стенды, мерч, форма, полиграфия, наружная реклама, брендбук</li>
+                        <li><strong>AI & Менеджмент:</strong> Midjourney, Recraft, постановка ТЗ, работа с подрядчиками, аналитика (Яндекс.Метрика, Roistat)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pet Projects -->
+            <div class="section">
+                <h3>Pet Projects</h3>
+                <ul style="list-style:none;font-size:15px;padding-left:0;">
+                    <li style="margin-bottom:10px;"><strong>01 — Мобильная система контроля зоопарка</strong><br />Концепт приложения для автоматизации работы с морской и трекинга задач.</li>
+                    <li style="margin-bottom:10px;"><strong>02 — Редактор генетического кода ребёнка</strong><br />Sci-Fi интерфейс моделирования генома со сложной логикой взаимосвязанных данных.</li>
+                    <li><strong>03 — Канцерный центр Flame Studio</strong><br />Презентационный премиум-интерфейс для фитнес-платформы с фокусом на бренд.</li>
+                </ul>
+            </div>
+
+            <div style="margin-top:32px;padding-top:24px;border-top:1px solid #eee;font-size:15px;color:#555;">
+                📧 <a href="mailto:neldubrovina@yandex.ru" style="border-bottom:1px solid #ddd;">neldubrovina@yandex.ru</a> – предпочтительный способ связи<br />
+                обновлено 09.2026
+            </div>
+        </main>
+
+    </div>
+
+    <footer>
+        <span>© 2026 Anastasia Khasanova</span>
+        <span>
+            <a href="resume.html">Резюме</a> ·
+            <a href="mailto:neldubrovina@yandex.ru">Email</a> ·
+            <a href="#">Telegram</a> ·
+            <a href="#">LinkedIn</a>
+        </span>
+    </footer>
+
+</body>
+</html>
